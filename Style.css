@@ -1,0 +1,56 @@
+video{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: -100;
+
+  background-size: cover;
+}
+.capa{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Estilo para el contenedor del contenido principal */
+.main-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté sobre el video */
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* Estilo para los cuadros de enlaces */
+p{color: white;}
+
+h3{color: #ffffff;}
+.cuadro {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para los botones */
+.cuadro a.btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+}

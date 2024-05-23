@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido a Mi Página Web</title>
+  <!-- Incluye Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    .custom-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .cuadro {
+      margin-bottom: 20px;
+    }
+
+    .custom-img-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Video de fondo -->
+  <video src="Intro.mp4" autoplay loop muted></video>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <div class="container">
+      <h1>UN MUNDO POR CONOCER</h1>
+      <p>Explora nuestros servicios y descubre más sobre nosotros.</p>
+      <a href="#" class="btn btn-dark" onclick="mostrarMas()">Ver más</a>
+      <div id="masContenido" style="display: none;" class="row mt-5">
+        <!-- Aquí se agregarán los cuadros dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Cuadros de enlaces -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="cuadro">
+          <h3>Argentina</h3>
+          <p>Argentina es un país increíblemente hermoso, con paisajes que van desde glaciares en la Patagonia hasta las
+            majestuosas Cataratas del Iguazú. Su cultura vibrante se refleja en el tango, la arquitectura europea de
+            Buenos Aires y la pasión por el fútbol. Es un destino que combina naturaleza y cultura de manera única y
+            emocionante.</p>
+          <a href="https://youtu.be/8OvfmZ_TTkM" class="btn btn-primary">Ver</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="cuadro">
+          <h3>Suiza</h3>
+          <p>Suiza es famosa por sus impresionantes paisajes alpinos, lagos cristalinos y pueblos encantadores. El
+            delicioso chocolate y ciudades modernas como Zúrich y Ginebra.
+            Ofrece actividades al aire libre como esquí y senderismo, y su cultura multicultural se refleja en su
+            gastronomía diversa. Suiza es un destino único que combina naturaleza, calidad y encanto.</p>
+          <a href="https://youtu.be/RSF8KL3xaIk" class="btn btn-primary">Ver</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="cuadro">
+          <h3>Noruega</h3>
+          <p>Noruega es conocida por sus espectaculares fiordos, montañas impresionantes y auroras boreales. Sus
+            ciudades como Oslo y Bergen combinan lo moderno con lo cultural. La cultura noruega se centra en la
+            sostenibilidad, la historia vikinga y la naturaleza. Es un destino fascinante para los amantes de la
+            aventura y la belleza natural.</p>
+          <a href="https://youtu.be/eRUQPfVACs0" class="btn btn-primary">Ver</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="cuadro">
+          <h3>Japón</h3>
+          <p>Japón un país fascinante que combina una historia cultural con tecnología de vanguardia. Sus
+            ciudades modernas como Tokio contrastan con sus tradicionales templos y jardines. El paisaje japonés es
+            diverso, desde montañas nevadas, playas tropicales. La gastronomía es otro aspecto
+            destacado, con sushi, ramen y té verde como parte integral de la cultura.</p>
+          <a href="https://youtu.be/PdFzTp64qHE" class="btn btn-primary">Ver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para mostrar más contenido -->
+  <script>
+    function mostrarMas() {
+      var contenido = document.getElementById("masContenido");
+      if (contenido.style.display === "none") {
+        contenido.style.display = "flex"; // Usar flex para diseño en línea
+        contenido.innerHTML = `
+          <div class="col-md-3">
+            <div class="cuadro">
+              <div class="custom-img-container">
+                <img src="th.jpeg" class="custom-img">
+              </div>
+              <h3>Plan 1</h3>
+              <p>Día 1-3: Buenos Aires
+              Descubre la pasión: tango, arte y deliciosa comida.</p>
+              <div class="custom-img-container">
+                <img src="th5.jpeg" class="custom-img">
+              </div>
+              <p>Día 4-7: Cerro Chapelco, San Martín de los Andes, Neuquén</p>
+              <div class="custom-img-container">
+                <img src="th6.png" class="custom-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cuadro">
+              <div class="custom-img-container">
+                <img src="th2.jpeg" class="custom-img">
+              </div>
+              <h3>Plan 2</h3>
+              <p>Día 1-2: Zúrich
+              casco antiguo, Bahnhofstrasse y el lago.
+              Cena en un restaurante con vistas al río Limmat.</p>
+              <div class="custom-img-container">
+                <img src="th7.jpg" class="custom-img">
+              </div>
+              <p>Día 4-5: Interlaken
+              Aventura al aire libre en Interlaken: senderismo, parapente o rafting.
+              Visita a las aldeas alpinas de Lauterbrunnen y Grindelwald.
+              <img src="th14.jpg" class="custom-img"></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cuadro">
+              <div class="custom-img-container">
+                <img src="th3.jpeg" class="custom-img">
+              </div>
+              <h3>Plan 3</h3>
+              <p>Plan de viaje a Noruega:
+              Día 1-3: Oslo
+              Explora el casco antiguo de Oslo, con sus calles estrechas y coloridas casas de madera.</p>
+              <div class="custom-img-container">
+                <img src="th9.jpg" class="custom-img">
+              </div>
+              <p>Día 4-7: Operahuset
+              Sube al Operahuset, la ópera de Oslo, con una arquitectura moderna y unas vistas impresionantes de la ciudad.</p>
+              <div class="custom-img-container">
+                <img src="th10.jpg" class="custom-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="cuadro">
+              <div class="custom-img-container">
+                <img src="th4.jpeg" class="custom-img">
+              </div>
+              <h3>Plan 4</h3>
+              <p>Día 1-2: Día 3: Kioto
+              Toma el tren bala de Tokio a Kioto, la antigua capital de Japón.</p>
+              <div class="custom-img-container">
+                <img src="th11.jpg" class="custom-img">
+              </div>
+              <p>Día 4-7:Todai-ji
+              Visita el templo Todai-ji, un templo budista que alberga una estatua de bronce de Buda de 15 metros de altura.</p>
+              <div class="custom-img-container">
+                <img src="th13.jpg" class="custom-img">
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        contenido.style.display = "none";
+        contenido.innerHTML = "";
+      }
+    }
+  </script>
+  <!-- Incluye jQuery, Popper.js y Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
